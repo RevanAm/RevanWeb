@@ -35,11 +35,11 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .achievements, .teams, .contact, footer{
+.about, .cards, .skills, .achievements, .friends, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.services .serv-content,
+.cards .cards-content,
 .skills .skills-content,
 .achievements .achievements-content,
 .contact .contact-content{
@@ -77,6 +77,10 @@ section .title::after{
     background: ivory;
     transform: translateX(-50%);
 }
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+    }
 
 /* navbar styling */
 .navbar{
@@ -97,7 +101,7 @@ section .title::after{
     justify-content: space-between;
 }
 .navbar .logo a{
-    color: ivory;
+    color: peachpuff;
     font-size: 35px;
     font-weight: 600;
 }
@@ -106,7 +110,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
-    color: ivory;
+    color: peachpuff;
 }
 .navbar .menu li{
     list-style: none;
@@ -114,7 +118,7 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: ivory;
+    color: peachpuff;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
@@ -258,21 +262,66 @@ section .title::after{
     background: none;
 }
 
-/* services section styling */
-.services, .teams{
+/* daSong section styling */
+.daSong .title::after{
+    content: "The song";
+}
+.daSong .daSong-content .left{
+    width: 45%;
+}
+.daSong .daSong-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.daSong .daSong-content .right{
+    width: 55%;
+}
+.daSong .daSong-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.daSong .daSong-content .right .text span{
+    color: tomato;
+}
+.daSong .daSong-content .right p{
+    text-align: justify;
+}
+.daSong .daSong-content .right a{
+    display: inline-block;
+    background: tomato;
+    color: ivory;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid tomato;
+    transition: all 0.3s ease;
+}
+.daSong .daSong-content .right a:hover{
+    color: tomato;
+    background: none;
+}
+
+
+/*.cards section styling */
+.cards, .friends{
     color:ivory;
     background: peachpuff;
 }
-.services .title::before,
-.teams .title::before{
+.cards .title::before,
+.friends .title::before{
     background: ivory;
 }
-.services .title::after,
-.teams .title::after{
+.cards .title::after,
+.friends .title::after{
     background: peachpuff;
     content: "what i like";
 }
-.services .serv-content .card{
+.cards .cards-content .card{
     width: calc(33% - 20px);
     background: #222;
     text-align: center;
@@ -281,24 +330,24 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover{
+.cards .cards-content .card:hover{
     background: tomato;
 }
-.services .serv-content .card .box{
+.cards .cards-content .card .box{
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box{
+.cards .cards-content .card:hover .box{
     transform: scale(1.05);
 }
-.services .serv-content .card i{
+.cards .cards-content .card i{
     font-size: 50px;
     color: tomato;
     transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i{
+.cards .cards-content .card:hover i{
     color: ivory;
 }
-.services .serv-content .card .text{
+.cards .cards-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
@@ -454,11 +503,11 @@ section .title::after{
     width: 70%;
 }
 
-/* teams section styling */
-.teams .title::after{
+/* friends section styling */
+.friends .title::after{
     content: "who with me";
 }
-.teams .carousel .card{
+.friends .carousel .card{
     background: #222;
     border-radius: 6px;
     padding: 25px 35px;
@@ -466,25 +515,25 @@ section .title::after{
     overflow: hidden;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover{
+.friends .carousel .card:hover{
     background: tomato;
 }
-.teams .carousel .card .box{
+.friends .carousel .card .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box{
+.friends .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.teams .carousel .card .text{
+.friends .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.teams .carousel .card img{
+.friends .carousel .card img{
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -492,7 +541,7 @@ section .title::after{
     border: 5px solid tomato;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover img{
+.friends .carousel .card:hover img{
     border-color: ivory;
 }
 .owl-dots{
@@ -694,7 +743,7 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .services .serv-content .card{
+    .cards .cards-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -723,7 +772,7 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .services .serv-content .card{
+    .cards .cards-content .card{
         width: 100%;
     }
 }
