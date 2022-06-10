@@ -35,11 +35,11 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .hobby, .skills, .achievements, .friends, .contact, footer{
+.about, .services, .skills, .achievements, .team, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.hobby .hobby-content,
+.services .serv-content,
 .skills .skills-content,
 .achievements .achievements-content,
 .contact .contact-content{
@@ -258,21 +258,21 @@ section .title::after{
     background: none;
 }
 
-/* hobby section styling */
-.hobby, .friends{
+/* services section styling */
+.services, .team{
     color:ivory;
     background: peachpuff;
 }
-.hobby .title::before,
-.friends .title::before{
+.services .title::before,
+.team .title::before{
     background: ivory;
 }
-.hobby .title::after,
-.friends .title::after{
+.services .title::after,
+.team .title::after{
     background: peachpuff;
     content: "what i like";
 }
-.hobby .hobby-content .card{
+.services .serv-content .card{
     width: calc(33% - 20px);
     background: #222;
     text-align: center;
@@ -281,24 +281,24 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.hobby .hobby-content .card:hover{
+.services .serv-content .card:hover{
     background: tomato;
 }
-.hobby .hobby-content .card .box{
+.services .serv-content .card .box{
     transition: all 0.3s ease;
 }
-.hobby .hobby-content .card:hover .box{
+.services .serv-content .card:hover .box{
     transform: scale(1.05);
 }
-.hobby .hobby-content .card i{
+.services .serv-content .card i{
     font-size: 50px;
     color: tomato;
     transition: color 0.3s ease;
 }
-.hobby .hobby-content .card:hover i{
+.services .serv-content .card:hover i{
     color: ivory;
 }
-.hobby .hobby-content .card .text{
+.services .serv-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
@@ -454,11 +454,11 @@ section .title::after{
     width: 70%;
 }
 
-/* friends section styling */
-.friends .title::after{
+/* team section styling */
+.team .title::after{
     content: "who with me";
 }
-.friends .carousel .card{
+.team .carousel .card{
     background: #222;
     border-radius: 6px;
     padding: 25px 35px;
@@ -466,25 +466,25 @@ section .title::after{
     overflow: hidden;
     transition: all 0.3s ease;
 }
-.friends .carousel .card:hover{
+.team .carousel .card:hover{
     background: tomato;
 }
-.friends .carousel .card .box{
+.team .carousel .card .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.friends .carousel .card:hover .box{
+.team .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.friends .carousel .card .text{
+.team .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.friends .carousel .card img{
+.team .carousel .card img{
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -492,7 +492,7 @@ section .title::after{
     border: 5px solid tomato;
     transition: all 0.3s ease;
 }
-.friends .carousel .card:hover img{
+.team .carousel .card:hover img{
     border-color: ivory;
 }
 .owl-dots{
@@ -694,7 +694,7 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .hobby .hobby-content .card{
+    .services .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -723,7 +723,7 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .hobby .hobby-content .card{
+    .services .serv-content .card{
         width: 100%;
     }
 }
